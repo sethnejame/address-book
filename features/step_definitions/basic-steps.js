@@ -9,7 +9,7 @@ After(async function() {
 })
 
 Then('I should see {string}', async function(content) {
-  // Write code here that turns the phrase above into concrete actions
+  return await this.pageHasTextContent(content)
   return 'pending'
 })
 
