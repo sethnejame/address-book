@@ -1,20 +1,11 @@
-// const { Given, Then } = require("cucumber");
-
-// Given("I visit the site", function() {
-//   // Write code here that turns the phrase above into concrete actions
-//   return "pending";
-// });
-
-// Then("I should see {string}", function(string) {
-//   // Write code here that turns the phrase above into concrete actions
-//   return "pending";
-// });
-
-const { Given, Then, When } = require('cucumber')
+const { After, Given, Then, When } = require('cucumber')
 
 Given('I visit the site', async function() {
-  // Write code here that turns the phrase above into concrete actions
-  return 'pending'
+  return await this.openHomePage()
+})
+
+After(async function() {
+  return await this.closeHomePage()
 })
 
 Then('I should see {string}', async function(content) {
