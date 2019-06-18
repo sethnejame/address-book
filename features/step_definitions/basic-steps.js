@@ -1,21 +1,21 @@
 const { After, Given, Then, When } = require('cucumber')
-
+//this works
 Given('I visit the site', async function() {
   return await this.openHomePage()
 })
-
+//this works
 After(async function() {
   return await this.closeHomePage()
 })
-
+//this works
 Then('I should see {string}', async function(content) {
   return await this.pageHasTextContent(content)
-  return 'pending'
+  
 })
 
 When('I click {string}', async function(string) {
-  // Write code here that turns the phrase above into concrete actions
-  return 'pending'
+  return await this.clickOnAddContactBtn()
+  
 })
 
 Then('I fill in {string} with {string}', async function(string, string2) {
