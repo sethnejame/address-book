@@ -12,12 +12,12 @@ Then('I should see {string}', async function(content) {
   return await this.pageHasTextContent(content)
   
 })
-
+//this works
 When('I click {string}', async function(string) {
-  return await this.clickOnAddContactBtn()
+  return await this.clickOnButton(string)
   
 })
-
+//this works
 Then('I fill in {string} with {string}', async function(field, content) {
   return await this.fillFormField(field.toLowerCase(), content)
 })
