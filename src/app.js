@@ -1,13 +1,8 @@
 const renderContacts = () => {
   const storage = window.localStorage
   // Read all the contacts from the storage
-    // assign an empty array
-    let contacts = JSON.parse(storage.getItem('contacts')) || []
-    // add the new contact to the contacts array
-    contacts.puch(contacts)
-    // save the new list
-    storage.setItem('contacts', JSON.stringify(contacts))
-    // Run render contacts one more time after we add a new one, to update the list
+    
+  const contacts = JSON.parse(storage.getItem('contacts'))
 
   // Select the container we will use to list the contacts 
   let div = document.querySelector('.contact-list')
