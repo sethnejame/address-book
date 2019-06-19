@@ -1,7 +1,13 @@
 const renderContacts = () => {
   const storage = window.localStorage
   // Read all the contacts from the storage
-  const contacts = JSON.parse(storage.getItem('contacts'))
+    // assign an empty array
+    let contacts = JSON.parse(storage.getItem('contacts')) || []
+    // add the new contact to the contacts array
+    contacts.puch(contacts)
+    // save the new list
+    storage.setItem('contacts', JSON.stringify(contacts))
+    // Run render contacts one more time after we add a new one, to update the list
 
   // Select the container we will use to list the contacts 
   let div = document.querySelector('.contact-list')
@@ -74,9 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   
       console.log(`Saving the following contact: ${JSON.stringify(contact)}`)
-      
+      // store existing contact currently added
       storage.setItem('contacts', JSON.stringify([contact]))
-      // Run render contacts one more time after we add a new one, to update the list
       renderContacts()
     })
   })  
