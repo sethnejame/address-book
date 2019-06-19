@@ -14,24 +14,37 @@
   <body>
     <div class="ui raised very padded text container segment">
       <h1>Contacts</h1>
-      <button class="add-contact">Add Contact</button>
+      <button class="add-contact ui orange button">Add Contact</button>
+
+      <form action="#" class="new-contact-form ui form">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="contact-name" name="name" type="text">
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="contact-email" name="email" type="email">
+        </div>
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input id="contact-phone" name="phone" type="text">
+        </div>
+        <div class="field">
+          <label for="company">Company</label>
+          <input id="contact-company" name="company" type="text">
+        </div>
+        <div class="field">
+          <label for="notes">Notes</label>
+          <textarea id="contact-notes" name="notes" type="text"></textarea>
+        </div>
+        <div class="field">
+          <label for="twitter">Twitter</label>
+          <input id="contact-twitter" name="twitter" type="text">
+        </div>
+        <input class="save-contact ui orange button" type="submit" value="Save contact">
+      </form>
       <div class="contact-list">
       </div>
-      <form action="#" class="new-contact-form">
-        <label for="name">Name</label>
-        <input id="contact-name" name="name" type="text">
-        <label for="email">Email</label>
-        <input id="contact-email" name="email" type="email">
-        <label for="phone">Phone</label>
-        <input id="contact-phone" name="phone" type="text">
-        <label for="company">Company</label>
-        <input id="contact-company" name="company" type="text">
-        <label for="notes">Notes</label>
-        <textarea id="contact-notes" name="notes" type="text"></textarea>
-        <label for="twitter">Twitter</label>
-        <input id="contact-twitter" name="twitter" type="text">
-        <input class="save-contact" type="submit" value="Save contact">
-      </form>
     </div>
     <script src="./dist/bundle.js"></script>
   </body>
