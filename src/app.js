@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // As soon as the page is loaded, run render Contacts to load the page up with saved contacts 
     renderContacts()
     // Select form object from the DOM
-    const addContactForm = document.querySelector('.new-contact-form')
+    const addContactForm = document.querySelector('#new-contact-form')
   
     // Register an event to listen for form submission
     addContactForm.addEventListener('submit', event => {
