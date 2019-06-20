@@ -9,6 +9,9 @@ document.getElementById("hide-form").addEventListener("click", function () {
   document.getElementById("show-div").style.display = "none";
 });
 
+
+
+
 console.log("here is some text")
 
 const renderContacts = () => {
@@ -44,6 +47,11 @@ const renderContacts = () => {
           </div>
           <br>
           <button type="button" id="delete-button">Delete Contact</button>
+          <script>
+          document.getElementById("delete-button").addEventListener("click", function () {
+            confirm("Delete contact?");
+          });
+          </script>
         </div>
      `
       // Add the contact's li to the unordered list we created earlier
