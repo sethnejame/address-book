@@ -42,6 +42,8 @@ const renderContacts = () => {
             ${ contact.email } | 
             <a href="https://www.twitter.com/${ contact.twitter}">@${contact.twitter}</a>
           </div>
+          <br>
+          <button type="button" id="delete-button">Delete Contact</button>
         </div>
      `
       // Add the contact's li to the unordered list we created earlier
