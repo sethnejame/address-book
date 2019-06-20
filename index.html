@@ -7,42 +7,46 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-    <script src="  https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script> -->
     <title>Address book</title>
   </head>
 
   <body>
     <div class="ui raised very padded text container segment">
       <h1>Contacts</h1>
-      <button class="add-contact ui orange button">Add Contact <i class="address book icon"></i></button>
-
-      <form action="#" class="new-contact-form ui form">
-        <div class="field">
-          <label for="name">Name <i class="transgender alternate icon"></i></label>
-          <input id="contact-name" name="name" type="text">
-        </div>
-        <div class="field">
-          <label for="email">Email <i class="envelope icon"></i></label>
-          <input id="contact-email" name="email" type="email">
-        </div>
-        <div class="field">
-          <label for="phone">Phone <i class="mobile icon"></i></label>
-          <input id="contact-phone" name="phone" type="text">
-        </div>
-        <div class="field">
-          <label for="company">Company <i class="handshake icon"></i></label>
-          <input id="contact-company" name="company" type="text">
-        </div>
-        <div class="field">
-          <label for="notes">Notes <i class="pencil alternate icon"></i></label>
-          <textarea id="contact-notes" name="notes" type="text"></textarea>
-        </div>
-        <div class="field">
-          <label for="twitter">Twitter</label>
-          <input id="contact-twitter" name="twitter" type="text">
-        </div>
-        <input class="save-contact ui orange button" type="submit" value="Save contact">
-      </form>
+      <button class="add-contact ui orange button" id="show-form-button">Add Contact</button>
+      <div id="show-div" style="display: none">
+        <form action="#" class="new-contact-form ui form">
+          <div class="field">
+            <br>
+            <label for="name">Name</label>
+            <input id="contact-name" name="name" type="text">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="contact-email" name="email" type="email">
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="contact-phone" name="phone" type="text">
+          </div>
+          <div class="field">
+            <label for="company">Company</label>
+            <input id="contact-company" name="company" type="text">
+          </div>
+          <div class="field">
+            <label for="notes">Notes</label>
+            <textarea id="contact-notes" name="notes" type="text"></textarea>
+          </div>
+          <div class="field">
+            <label for="twitter">Twitter</label>
+            <input id="contact-twitter" name="twitter" type="text">
+          </div>
+          <input class="save-contact ui orange button" id="hide-form" type="submit" value="Save contact">
+        </form>
+      </div>
+      <br>
+      <br>
       <div class="contact-list">
       </div>
     </div>

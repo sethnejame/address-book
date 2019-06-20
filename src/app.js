@@ -1,5 +1,16 @@
 const storage = window.localStorage
 
+// Toggle form field displayed/hidden
+document.getElementById("show-form-button").addEventListener("click", function () {
+  document.getElementById("show-div").style.display = "block";
+});
+// Hide showForm div after submit
+document.getElementById("hide-form").addEventListener("click", function () {
+  document.getElementById("show-div").style.display = "none";
+});
+
+console.log("here is some text")
+
 const renderContacts = () => {
   
   // Read all the contacts from the storage
@@ -22,7 +33,7 @@ const renderContacts = () => {
       li.innerHTML = `
         <div class="card">
           <div class="image">
-            <img src="https://ca-address-book.herokuapp.com/images/pine.jpg" />
+            <img src="#">
           </div>
           <div class="content">
             <h1>${ contact.name }</h1>
@@ -73,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
         company: company.value,
         notes: notes.value,
         twitter: twitter.value,
-      }
+      }      
   
       console.log(`Saving the following contact: ${JSON.stringify(contact)}`)
 
