@@ -11,7 +11,6 @@ document.getElementById("hide-form").addEventListener("click", function () {
 
 
 
-
 console.log("here is some text")
 
 const renderContacts = () => {
@@ -46,14 +45,21 @@ const renderContacts = () => {
             <a href="https://www.twitter.com/${ contact.twitter}">@${contact.twitter}</a>
           </div>
           <br>
-          <button type="button" id="delete-button">Delete Contact</button>
-          <script>
-          document.getElementById("delete-button").addEventListener("click", function () {
-            confirm("Delete contact?");
-          });
-          </script>
         </div>
      `
+      // Create new delete button
+      let button = document.createElement('button');
+      // Give it a class of "delete-contact" !!TODO - Change delete-contact to unique value for every card
+      button.classList += "delete-contact";
+      // Inside of the button will read "Delete Contact"
+      button.innerHTML ='Delete Contact';
+      // delete button functionality
+      // document.getElementsByClassName("delete-contact").addEventListener("click", function () {
+      //   console.log("delete was successful")
+      // });
+      // Append (add) the button to the bottom of the new contact card
+      li.appendChild(button) 
+
       // Add the contact's li to the unordered list we created earlier
       ul.appendChild(li)
     })
@@ -63,6 +69,7 @@ const renderContacts = () => {
   } else { 
     div.innerHTML = '<p>You have no contacts in your address book</p>' 
   }
+
 }
 
 
@@ -103,8 +110,10 @@ document.addEventListener('DOMContentLoaded', () => {
       contacts.push(contact)
       // store existing contact currently added
       storage.setItem('contacts', JSON.stringify(contacts))
+
       renderContacts()
       addContactForm.reset()
+
     })
   })  
 
