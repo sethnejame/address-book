@@ -31,9 +31,9 @@ const renderContacts = () => {
     contacts.forEach(contact => {
       let li = document.createElement('li')
       li.innerHTML = `
-        <div class="card">
-          <div class="image">
-            <img src="#">
+        <div class="card ui raised very padded text container segment">
+          <div class="icon">
+          <i class="address card outline icon" style="width:50px; height:50px"></i>
           </div>
           <div class="content">
             <h1>${ contact.name }</h1>
