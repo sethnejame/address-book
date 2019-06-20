@@ -56,8 +56,11 @@ const renderContacts = () => {
 
       // delete button functionality
       button.onclick = function () { 
-        var elem =document.querySelector('li')
+        var elem = document.querySelector('li')
         elem.parentNode.removeChild(elem)
+        var storedNames = JSON.parse(storage.getItem("contacts"));
+        storedNames.splice(0, 1)
+        storage.setItem('contacts', JSON.stringify(storedNames));
       };
 
       // Append (add) the button to the bottom of the new contact card
