@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" src="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script> -->
@@ -13,8 +13,10 @@
   </head>
 
   <body>
-    <div class="ui raised very padded text container segment">
+  <div class="container">
+    <div class="contact-container">
       <h1>Contacts</h1>
+      <p id="julie">hejhejhej</p>
       <button class="add-contact ui orange button" id="show-form-button">Add Contact</button>
       <div id="show-div" style="display: none">
         <form action="#" class="new-contact-form ui form">
@@ -44,13 +46,14 @@
             <input id="contact-twitter" name="twitter" type="text">
           </div>
           <input class="save-contact ui orange button" id="hide-form" type="submit" value="Save contact">
-        </form>
+        </form>      
+        <div class="contact-list">
+          </div>
       </div>
       <br>
       <br>
-      <div class="contact-list">
-      </div>
     </div>
+  </div>
     <script src="./dist/bundle.js"></script>
   </body>
 
