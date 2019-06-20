@@ -53,10 +53,13 @@ const renderContacts = () => {
       button.classList += "delete-contact";
       // Inside of the button will read "Delete Contact"
       button.innerHTML ='Delete Contact';
+
       // delete button functionality
-      // document.getElementsByClassName("delete-contact").addEventListener("click", function () {
-      //   console.log("delete was successful")
-      // });
+      button.onclick = function () { 
+        var elem =document.querySelector('li')
+        elem.parentNode.removeChild(elem)
+      };
+
       // Append (add) the button to the bottom of the new contact card
       li.appendChild(button) 
 
