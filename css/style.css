@@ -26,11 +26,13 @@ html, body {
     width: 200px;
     height: 250px;
     border-radius: 25px;
-    background-color: #f6d365;
-    opacity: .5;
+    background-color:rgba(246,211,101,.4);
     text-align: left;
     padding: 10px;
-    color: aqua;
+}
+.content {
+    opacity: 1 !important;
+    color: white;
 }
 
 /* This is an example of a CLASS style */
@@ -40,4 +42,8 @@ html, body {
 /* This is an example of an ID style */
 #julie {
     color: red;
+}
+
+ul li {
+    display: inline;
 }

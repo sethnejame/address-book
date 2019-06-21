@@ -1,4 +1,5 @@
 const storage = window.localStorage
+var idCounter = 0;
 
 // Toggle form field displayed/hidden
 document.getElementById("show-form-button").addEventListener("click", function () {
@@ -34,8 +35,8 @@ const renderContacts = () => {
       let li = document.createElement('li')
       li.innerHTML = `
         <div id="contact-card">
-          <div class="icon">
-          <i class="address card outline icon" style="width:50px; height:50px"></i>
+          <div class="avatar">
+          <p>image here</p>
           </div>
           <div class="content">
             <h2>${ contact.name }</h1>
@@ -48,10 +49,12 @@ const renderContacts = () => {
           <br>
         </div>
      `
+      // increment ID counter
+      idCounter++
       // Create new delete button
       let button = document.createElement('button');
       // Give it a class of "delete-contact" !!TODO - Change delete-contact to unique value for every card
-      button.classList += "delete-contact";
+      button.classList += "delete-contact ui orange button";
       // Inside of the button will read "Delete Contact"
       button.innerHTML ='Delete Contact';
 
@@ -60,7 +63,7 @@ const renderContacts = () => {
         var elem = document.querySelector('li')
         elem.parentNode.removeChild(elem)
         var storedNames = JSON.parse(storage.getItem("contacts"));
-        storedNames.splice(0, 1)
+        storedNames.splice(idCounter, 1)
         storage.setItem('contacts', JSON.stringify(storedNames));
       };
 
