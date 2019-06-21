@@ -38,11 +38,12 @@ const renderContacts = () => {
           <i class="address card outline icon" style="width:50px; height:50px"></i>
           </div>
           <div class="content">
-            <h1>${ contact.name }</h1>
-            <h2>${ contact.company }</h2>
+            <h2>${ contact.name }</h1>
+            <p>${ contact.company }</p>
             <p>${ contact.notes }</p> 
-            ${ contact.email } | 
-            <a href="https://www.twitter.com/${ contact.twitter}">@${contact.twitter}</a>
+            <p>${ contact.email } | 
+            <a href="https://www.twitter.com/${ contact.twitter}">@${contact.twitter}</a></p>
+            <p>${ contact.id }</p>
           </div>
           <br>
         </div>
