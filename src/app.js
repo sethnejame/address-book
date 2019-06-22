@@ -36,12 +36,11 @@ const renderContacts = () => {
       li.innerHTML = `
         <div id="contact-card">
           <div class="content">
-            <h2><i class="ion-md-person"></i>${ contact.name }</h1>
+            <h2><i class="ion-md-person"></i>${ contact.name }</h2>
             <p>${ contact.company }</p>
             <p>${ contact.notes }</p> 
             <p>${ contact.email } | 
             <a href="https://www.twitter.com/${ contact.twitter}">@${contact.twitter}</a></p>
-            <p>${ contact.id }</p>
           </div>
           <br>
         </div>
