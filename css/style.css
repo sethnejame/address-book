@@ -30,6 +30,7 @@ html, body {
     background-color:rgba(246,211,101,.4);
     text-align: left;
     padding: 10px;
+    box-shadow: 2px 2px 5px gray;
 }
 .content {
     opacity: 1 !important;
@@ -43,11 +44,27 @@ html, body {
 .contact-list ul li {
     display: inline-block;
 }
+
+.new-contact-form {
+    width: 400px !important;
+    text-align: left;
+}
 /* This is an example of an ID style */
 #julie {
     color: red;
 }
 
+#show-div {
+    width: 400px;
+    margin: auto;
+}
+
 ul li {
     display: inline;
+}
+
+i {
+    font-size: 25px;
+    float: left;
+    padding-right: 10px;
 }

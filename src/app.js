@@ -35,11 +35,8 @@ const renderContacts = () => {
       let li = document.createElement('li')
       li.innerHTML = `
         <div id="contact-card">
-          <div class="avatar">
-          <p>image here</p>
-          </div>
           <div class="content">
-            <h2>${ contact.name }</h1>
+            <h2><i class="ion-md-person"></i>${ contact.name }</h1>
             <p>${ contact.company }</p>
             <p>${ contact.notes }</p> 
             <p>${ contact.email } | 
