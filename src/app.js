@@ -45,23 +45,33 @@ const renderContacts = () => {
           <br>
         </div>
      `
-      // increment ID counter
-      idCounter++
+      // set the li's ID to that particular contact ID
+      li.setAttribute("id", contact.id)
       // Create new delete button
       let button = document.createElement('button');
       // Give it a class of "delete-contact" !!TODO - Change delete-contact to unique value for every card
-      button.classList += "delete-contact ui orange button";
+      button.classList += "delete-contact ui mini orange button";
       // Inside of the button will read "Delete Contact"
-      button.innerHTML ='Delete Contact';
+      button.innerHTML ='Delete';
+      // Delete button functionality
+      button.addEventListener("click", () => {
+        // Grab the LI div where the contact card is stored and delete it
+        let contactLiID = document.getElementById(contact.id)
+        contactLiID.parentNode.removeChild(contactLiID)
+        // Pull the contacts out of storage
+        let storedNames = JSON.parse(storage.getItem("contacts"));
 
-      // delete button functionality
-      button.onclick = function () { 
-        var elem = document.querySelector('li')
-        elem.parentNode.removeChild(elem)
-        var storedNames = JSON.parse(storage.getItem("contacts"));
-        storedNames.splice(idCounter, 1)
+       // iteration loop won't work :(
+        storedNames.forEach(name, function () {
+          console.log(name)
+          if(name.id == contact.id) {
+            console.log(name)
+            storedNames.splice(storedNames.indexOf(name), 1)
+          }
+        })
+        
         storage.setItem('contacts', JSON.stringify(storedNames));
-      };
+      })
 
       // Append (add) the button to the bottom of the new contact card
       li.appendChild(button) 
