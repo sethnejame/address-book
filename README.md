@@ -17,4 +17,8 @@ Semantic UI 60 Min Crash Course - How to work with Semantic UI CDN/CSS Styling
 https://www.youtube.com/watch?v=a9mUH1EWp40
 
 Accessing DOM Elements - Delete Button Functionality, C/O Faraz
+<<<<<<< HEAD
 https://gomakethings.com/removing-an-element-from-the-dom-with-vanilla-js/
+=======
+https://gomakethings.com/removing-an-element-from-the-dom-with-vanilla-js/
+>>>>>>> 25391ed6044a737f7875a2b7fec273155a9f4be7
