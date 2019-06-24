@@ -53,6 +53,12 @@ const renderContacts = () => {
       button.classList += "delete-contact ui mini orange button";
       // Inside of the button will read "Delete Contact"
       button.innerHTML ='Delete';
+      // create a modify button
+      let btn = document.createElement("btn");
+      //giving it a class
+      btn.classList += "Modify ui mini orange button";
+      // Inside of the button will read "Modify"
+      btn.innerHTML ='Modify';
       // Delete button functionality
       button.addEventListener("click", () => {
         // Grab the LI div where the contact card is stored and delete it
@@ -60,6 +66,16 @@ const renderContacts = () => {
         contactLiID.parentNode.removeChild(contactLiID)
         // Pull the contacts out of storage
         let storedNames = JSON.parse(storage.getItem("contacts"));
+
+      //    // Modify button functionality
+      // btn.onclick = function () {
+      //   let elem = document.querySelector('li')
+      //   // elem.parentNode.replaceChild(elem)
+      //   elem.innerHTML = inputText.value;
+  
+      //   // items[li].innerHTML = inputText.value;
+  
+      // }
 
        // iteration loop won't work :(
         storedNames.forEach(name, function () {
@@ -75,6 +91,9 @@ const renderContacts = () => {
 
       // Append (add) the button to the bottom of the new contact card
       li.appendChild(button) 
+            
+      // Append the new modify button to the bottom of the new contact card
+      li.appendChild(btn) 
 
       // Add the contact's li to the unordered list we created earlier
       ul.appendChild(li)
