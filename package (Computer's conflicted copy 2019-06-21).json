@@ -1,0 +1,8 @@
+{
+  "name": "address-book",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/sethnejame/address-book.git",
+  "author": "Seth NeJame <sethnejame@gmail.com>",
+  "license": "MIT"
+}
