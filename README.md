@@ -3,10 +3,11 @@
 The address book is a web app that allows you to store a list of contacts via localStorage in the web browser.  The UI is styled with a combination of custom CSS and Semanti UI.  See below for a list of references.
 
 ### Usage
-1. Click the "Add Contact" from to open a drop down form.  Fill in the drop down form with the desired information.
-2. When you're finished, click the "Save Contact" button at the bottom of the form.  This will populate an address book below the form where you can view all your contacts.
-3. If you wish to remove a contact, simply click on the "Delete" button under each contact card.
-4. The "modify" button is currently under development.
+1. Visit https://sethnejame.github.io/address-book/ for the deployed Address Book app
+2. Click the "Add Contact" from to open a drop down form.  Fill in the drop down form with the desired information.
+3. When you're finished, click the "Save Contact" button at the bottom of the form.  This will populate an address book below the form where you can view all your contacts.
+4. If you wish to remove a contact, simply click on the "Delete" button under each contact card.
+5. The "modify" button is currently under development.
 
 ### Resources
 
